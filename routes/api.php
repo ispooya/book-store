@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,3 @@ Route::get('/books', 'BooksController@getCollection');
 Route::post('/books', 'BooksController@post')->middleware('auth.admin');
 
 Route::post('/books/{book}/reviews', 'BooksController@postReview');
-

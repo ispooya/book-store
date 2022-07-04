@@ -27,8 +27,8 @@ class CreateBooksTable extends Migration
         });
 
         Schema::create('book_author', function (Blueprint $table) {
-            $table->bigInteger('book_id');
-            $table->bigInteger('author_id');
+            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('author_id');
 
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
             $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
@@ -36,9 +36,9 @@ class CreateBooksTable extends Migration
 
         Schema::create('book_reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('book_id');
-            $table->bigInteger('user_id');
-            $table->tinyInteger('review')->unsigned();
+            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedTinyInteger('review');
             $table->text('comment');
 
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
