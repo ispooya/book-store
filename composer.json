@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
+        "brianium/paratest": "^6.5",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
@@ -26,7 +27,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeds/"
         }
     },
     "autoload-dev": {
