@@ -23,7 +23,6 @@ class Book extends Model
         'review',
     ];
 
-
     public function authors()
     {
         return $this->belongsToMany(Author::class, 'book_author');
@@ -37,8 +36,8 @@ class Book extends Model
     public function getReviewAttribute()
     {
         return $this->review = [
-            'count' =>  $this->reviews()->count(),
-            'avg' => $this->reviews()->avg('review') ? $this->reviews()->avg('review') : 0
+            'count' =>  (int) $this->reviews()->count(),
+            'avg' => (int) $this->reviews()->avg('review') ? round($this->reviews()->avg('review')) : 0
         ];
     }
 }

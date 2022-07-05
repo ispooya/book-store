@@ -18,7 +18,7 @@ class BooksController extends Controller
 {
     public function getCollection(Request $request)
     {
-        $books = Book::with(['authors'])->paginate(1);
+        $books = Book::with(['authors'])->paginate(15);
         $books = collect($books);
         $books->put(
             'links',
@@ -47,7 +47,7 @@ class BooksController extends Controller
             'current_page', 'first_page_url', 'from', 'last_page', 'last_page_url', 'next_page_url', 'path', 'per_page',
             'prev_page_url', 'to', 'total'
         ]);
-        return response()->json($books);
+        return response()->json($books->all());
     }
 
     public function post(PostBookRequest $request)
