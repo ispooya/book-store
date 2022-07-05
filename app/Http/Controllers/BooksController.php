@@ -37,7 +37,8 @@ class BooksController extends Controller
                 $title = $request->title;
                 $q->where('title', 'LIKE', "%$title%");
             }
-        )->with(['authors'])->paginate(15);
+        )->orderBy($request->sortColumn ? $request->sortColumn : 'id', $request->sortDirection ? $request->sortDirection : 'asc')
+            ->with(['authors'])->paginate(15);
 
 
 
@@ -69,6 +70,7 @@ class BooksController extends Controller
             'current_page', 'first_page_url', 'from', 'last_page', 'last_page_url', 'next_page_url', 'path', 'per_page',
             'prev_page_url', 'to', 'total'
         ]);
+        // $books = $request->has('sortColumn') ? $books
         return response()->json($books->all());
     }
 
