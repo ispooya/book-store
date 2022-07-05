@@ -19,6 +19,12 @@ class BooksController extends Controller
 {
     public function getCollection(Request $request)
     {
+        $sortColumns = [
+            'avg_review' => 'reviews_avg_review',
+            'title' => 'title',
+            'author' => 'author'
+        ];
+        $sortColumn = array_key_exists($request->sortColumn, $sortColumns) ? $sortColumns[$request->sortColumn] : 'id';
         $books = Book::when(
             // Author filter
             $request->has('authors'),
@@ -37,8 +43,8 @@ class BooksController extends Controller
                 $title = $request->title;
                 $q->where('title', 'LIKE', "%$title%");
             }
-        )->orderBy($request->sortColumn ? $request->sortColumn : 'id', $request->sortDirection ? $request->sortDirection : 'asc')
-            ->with(['authors'])->paginate(15);
+        )->orderBy($sortColumn, $request->sortDirection ? $request->sortDirection : 'asc')
+            ->with(['authors'])->withAvg('reviews', 'review')->paginate(15);
 
 
 
