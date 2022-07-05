@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="3" assertions="82" errors="0" warnings="0" failures="0" skipped="0" time="0.173733">
-    <testsuite name="Feature" tests="3" assertions="82" errors="0" warnings="0" failures="0" skipped="0" time="0.173733">
-      <testsuite name="Tests\Feature\BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" tests="3" assertions="82" errors="0" warnings="0" failures="0" skipped="0" time="0.173733">
-        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="76" time="0.116917"/>
-        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="2" time="0.036084"/>
-        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="4" time="0.020732"/>
+  <testsuite name="" tests="5" assertions="92" errors="0" warnings="0" failures="0" skipped="0" time="0.217358">
+    <testsuite name="Feature" tests="5" assertions="92" errors="0" warnings="0" failures="0" skipped="0" time="0.217358">
+      <testsuite name="Tests\Feature\BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" tests="5" assertions="92" errors="0" warnings="0" failures="0" skipped="0" time="0.217358">
+        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="76" time="0.163342"/>
+        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="2" time="0.015367"/>
+        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="92" assertions="4" time="0.007793"/>
+        <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="109" assertions="6" time="0.010227"/>
+        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="4" time="0.020629"/>
       </testsuite>
     </testsuite>
   </testsuite>
