@@ -19,6 +19,11 @@ class Book extends Model
         'description',
     ];
 
+    protected $appends = [
+        'review',
+    ];
+
+
     public function authors()
     {
         return $this->belongsToMany(Author::class, 'book_author');
@@ -27,5 +32,13 @@ class Book extends Model
     public function reviews()
     {
         return $this->hasMany(BookReview::class);
+    }
+
+    public function getReviewAttribute()
+    {
+        return $this->review = [
+            'count' =>  $this->reviews()->count(),
+            'avg' => $this->reviews()->avg('review') ? $this->reviews()->avg('review') : 0
+        ];
     }
 }

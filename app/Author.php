@@ -17,4 +17,5 @@ class Author extends Model
         'name',
         'surname',
     ];
+    protected $hidden = ['pivot'];
 }

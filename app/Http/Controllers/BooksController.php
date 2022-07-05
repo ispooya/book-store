@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
@@ -18,7 +18,36 @@ class BooksController extends Controller
 {
     public function getCollection(Request $request)
     {
-        //@todo code here
+        $books = Book::with(['authors'])->paginate(1);
+        $books = collect($books);
+        $books->put(
+            'links',
+            [
+                "first" => $books->get("first_page_url"),
+                "last" => $books->get("last_page_url"),
+                "next" => $books->get("next_page_url"),
+                "prev" => $books->get("prev_page_url"),
+
+            ]
+        );
+        $books->put(
+            'meta',
+
+            [
+                'current_page' => $books->get("current_page"),
+                'from' => $books->get("from"),
+                'last_page' => $books->get("last_page"),
+                'path' => $books->get("path"),
+                'per_page' => $books->get("per_page"),
+                'to' => $books->get("to"),
+                'total' => $books->get("total"),
+            ]
+        );
+        $books->forget([
+            'current_page', 'first_page_url', 'from', 'last_page', 'last_page_url', 'next_page_url', 'path', 'per_page',
+            'prev_page_url', 'to', 'total'
+        ]);
+        return response()->json($books);
     }
 
     public function post(PostBookRequest $request)
