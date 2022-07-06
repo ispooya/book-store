@@ -1,179 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="24" assertions="29" errors="0" warnings="0" failures="21" skipped="0" time="0.345079">
-    <testsuite name="Feature" tests="24" assertions="29" errors="0" warnings="0" failures="21" skipped="0" time="0.345079">
-      <testsuite name="Tests\Feature\BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="24" assertions="29" errors="0" warnings="0" failures="21" skipped="0" time="0.345079">
-        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="14" assertions="1" time="0.117235"/>
-        <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="28" assertions="1" time="0.010548"/>
-        <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="45" assertions="6" time="0.023493"/>
-        <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="21" assertions="21" errors="0" warnings="0" failures="21" skipped="0" time="0.193803">
-          <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.010961">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #0 (array(null), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
+  <testsuite name="" tests="42" assertions="182" errors="0" warnings="0" failures="11" skipped="0" time="0.437229">
+    <testsuite name="Feature" tests="42" assertions="182" errors="0" warnings="0" failures="11" skipped="0" time="0.437229">
+      <testsuite name="Tests\Feature\BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" tests="7" assertions="100" errors="0" warnings="0" failures="0" skipped="0" time="0.190933">
+        <testcase name="testResponseStructure" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="14" assertions="76" time="0.111617"/>
+        <testcase name="testListWithoutFilters" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="72" assertions="2" time="0.023451"/>
+        <testcase name="testTitleFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="92" assertions="4" time="0.008145"/>
+        <testcase name="testAuthorsFilter" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="109" assertions="6" time="0.010320"/>
+        <testcase name="testTitleSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="139" assertions="4" time="0.009714"/>
+        <testcase name="testAvgReviewSort" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="157" assertions="4" time="0.009215"/>
+        <testcase name="testPagination" class="Tests\Feature\BooksListTest" classname="Tests.Feature.BooksListTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookListTest.php" line="189" assertions="4" time="0.018472"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" tests="24" assertions="71" errors="0" warnings="0" failures="0" skipped="0" time="0.175206">
+        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="14" assertions="1" time="0.010244"/>
+        <testcase name="testDenyNonAdminUserAccess" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="28" assertions="1" time="0.008071"/>
+        <testcase name="testSuccessfulPost" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="45" assertions="6" time="0.011444"/>
+        <testsuite name="Tests\Feature\BookPostTest::testValidation" tests="21" assertions="63" errors="0" warnings="0" failures="0" skipped="0" time="0.145447">
+          <testcase name="testValidation with data set #0" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.010623"/>
+          <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.007106"/>
+          <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006970"/>
+          <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006582"/>
+          <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006410"/>
+          <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006393"/>
+          <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006456"/>
+          <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006429"/>
+          <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006382"/>
+          <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006387"/>
+          <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006445"/>
+          <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006529"/>
+          <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006487"/>
+          <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006652"/>
+          <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.007217"/>
+          <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006806"/>
+          <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006561"/>
+          <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.009826"/>
+          <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006546"/>
+          <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006350"/>
+          <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="3" time="0.006291"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="Tests\Feature\BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" tests="11" assertions="11" errors="0" warnings="0" failures="11" skipped="0" time="0.071089">
+        <testcase name="testDenyGuestAccess" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="14" assertions="1" time="0.007020">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testDenyGuestAccess
+Expected response status code [401] but received 200.
+  Failed asserting that 401 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:23</failure>
+        </testcase>
+        <testcase name="testSuccessfulPost" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="26" assertions="1" time="0.009826">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testSuccessfulPost
+Expected response status code [201] but received 200.
+  Failed asserting that 201 is identical to 200.
+
+/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:38</failure>
+        </testcase>
+        <testsuite name="Tests\Feature\BookReviewTest::testValidation" tests="9" assertions="9" errors="0" warnings="0" failures="9" skipped="0" time="0.054243">
+          <testcase name="testValidation with data set #0" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.006260">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #0 (array(null), 'review')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
+
+/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #1" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008355">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #1 (array(''), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
+          <testcase name="testValidation with data set #1" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.006514">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #1 (array(''), 'review')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #2" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008369">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #2 (array('97883283023414'), 'isbn')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
+          <testcase name="testValidation with data set #2" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.006161">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #2 (array(0), 'review')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #3" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008910">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #3 (array('978832830'), 'isbn')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
+          <testcase name="testValidation with data set #3" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.005768">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #3 (array(11), 'review')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #4" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008741">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #4 (array('97883283023422'), 'isbn')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
+          <testcase name="testValidation with data set #4" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.005938">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #4 (array(3.5), 'review')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #5" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008865">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #5 (array(array()), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
+          <testcase name="testValidation with data set #5" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.005697">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #5 (array(array()), 'review')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #6" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.010541">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #6 (array(array(673890)), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
+          <testcase name="testValidation with data set #6" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.005912">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #6 (array(null), 'comment')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #7" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008329">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #7 (array(array('978832830234')), 'isbn')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
+          <testcase name="testValidation with data set #7" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.006163">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #7 (array(''), 'comment')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
-          <testcase name="testValidation with data set #8" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008120">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #8 (array('FCKGWRHQQ2'), 'isbn')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
+          <testcase name="testValidation with data set #8" class="Tests\Feature\BookReviewTest" classname="Tests.Feature.BookReviewTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php" line="64" assertions="1" time="0.005830">
+            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookReviewTest::testValidation with data set #8 (array(array()), 'comment')
+Expected response status code [422] but received 200.
+  Failed asserting that 422 is identical to 200.
 
 /Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #9" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.006893">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #9 (array(null), 'title')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #10" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.006506">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #10 (array(''), 'title')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #11" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.006449">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #11 (array(array()), 'title')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #12" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.028960">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #12 (array(null), 'description')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #13" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.007517">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #13 (array(''), 'description')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #14" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.007699">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #14 (array(array()), 'description')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #15" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.006678">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #15 (array(null), 'authors')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #16" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.006551">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #16 (array(array()), 'authors')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #17" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.007222">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #17 (array(''), 'authors')
-Expected response status code [422] but received 201.
-  Failed asserting that 422 is identical to 201.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #18" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.009662">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #18 (array(array(999999)), 'authors.0')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #19" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.009956">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #19 (array(array(array())), 'authors.0')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
-          </testcase>
-          <testcase name="testValidation with data set #20" class="Tests\Feature\BookPostTest" classname="Tests.Feature.BookPostTest" file="/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php" line="73" assertions="1" time="0.008520">
-            <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\BookPostTest::testValidation with data set #20 (array(array(null)), 'authors.0')
-Expected response status code [422] but received 500.
-  Failed asserting that 422 is identical to 500.
-
-/Users/pooya/Downloads/tasks/a/example-app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
-/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookPostTest.php:92</failure>
+/Users/pooya/Downloads/tasks/a/example-app/tests/Feature/BookReviewTest.php:79</failure>
           </testcase>
         </testsuite>
       </testsuite>
