@@ -23,7 +23,6 @@ class BooksController extends Controller
         $sortColumns = [
             'avg_review' => 'reviews_avg_review',
             'title' => 'title',
-            'author' => 'author'
         ];
         $sortColumn = array_key_exists($request->sortColumn, $sortColumns) ? $sortColumns[$request->sortColumn] : 'id';
         $books = Book::when(
