@@ -88,7 +88,6 @@ class BooksController extends Controller
 
     public function post(PostBookRequest $request)
     {
-
         $book = new Book();
         $book->isbn = $request->isbn;
         $book->title = $request->title;
@@ -101,6 +100,13 @@ class BooksController extends Controller
 
     public function postReview(Book $book, PostBookReviewRequest $request)
     {
-        //@todo code here
+        $bookReview = new BookReview();
+        $bookReview->book_id = $book->id;
+        $bookReview->user_id = $request->user()->id;
+        $bookReview->review = $request->review;
+        $bookReview->comment = $request->comment;
+        $bookReview->save();
+        $bookReview->load('user');
+        return response()->json(['data' => $bookReview], 201);
     }
 }
