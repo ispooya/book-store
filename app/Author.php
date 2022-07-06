@@ -18,4 +18,9 @@ class Author extends Model
         'surname',
     ];
     protected $hidden = ['pivot'];
+
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 }

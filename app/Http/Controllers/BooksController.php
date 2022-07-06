@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class BooksController extends Controller
 {
@@ -46,9 +47,9 @@ class BooksController extends Controller
         )->orderBy($sortColumn, $request->sortDirection ? $request->sortDirection : 'asc')
             ->with(['authors'])->withAvg('reviews', 'review')->paginate(15);
 
-
-
         $books = collect($books);
+
+        // put links object to books collection
         $books->put(
             'links',
             [
@@ -59,6 +60,8 @@ class BooksController extends Controller
 
             ]
         );
+
+        // put meta object to books collection
         $books->put(
             'meta',
 
@@ -72,17 +75,28 @@ class BooksController extends Controller
                 'total' => $books->get("total"),
             ]
         );
+
+        // remove some additional data from collection
         $books->forget([
             'current_page', 'first_page_url', 'from', 'last_page', 'last_page_url', 'next_page_url', 'path', 'per_page',
-            'prev_page_url', 'to', 'total'
+            'prev_page_url', 'to', 'total', 'reviews_avg_review'
         ]);
-        // $books = $request->has('sortColumn') ? $books
+
+        // return books as json
         return response()->json($books->all());
     }
 
     public function post(PostBookRequest $request)
     {
-        //@todo code here
+
+        $book = new Book();
+        $book->isbn = $request->isbn;
+        $book->title = $request->title;
+        $book->description = $request->description;
+        $book->save();
+        $book->authors()->attach($request->authors);
+        $book->load('authors');
+        return response()->json(['data' => $book], 201);
     }
 
     public function postReview(Book $book, PostBookReviewRequest $request)
