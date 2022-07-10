@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 
 namespace App\Http\Resources;
@@ -19,7 +19,9 @@ class AuthorResource extends JsonResource
     public function toArray($request)
     {
         return [
-            //@todo code here
+            'id' => $this->id,
+            'name' => $this->name,
+            'surname' => $this->surname,
         ];
     }
 }

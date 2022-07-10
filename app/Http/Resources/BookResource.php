@@ -27,7 +27,7 @@ class BookResource extends JsonResource
             "isbn" => $this->isbn,
             "title" => $this->title,
             "description" => $this->description,
-            "authors" => $this->authors,
+            "authors" => AuthorResource::collection($this->whenLoaded('authors')),
             'review' => [
                 'avg' => (int) $this->reviews()->avg('review') ? round($this->reviews()->avg('review')) : 0,
                 'count' => (int) $this->reviews()->count()
