@@ -19,9 +19,6 @@ class Book extends Model
         'description',
     ];
 
-    protected $appends = [
-        'review',
-    ];
 
     public function authors()
     {
@@ -31,13 +28,5 @@ class Book extends Model
     public function reviews()
     {
         return $this->hasMany(BookReview::class);
-    }
-
-    public function getReviewAttribute()
-    {
-        return $this->review = [
-            'count' =>  (int) $this->reviews()->count(),
-            'avg' => (int) $this->reviews()->avg('review') ? round($this->reviews()->avg('review')) : 0
-        ];
     }
 }
